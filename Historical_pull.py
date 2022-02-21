@@ -28,8 +28,10 @@ class Data_Formatter:
         # Effects: Creates a _____ file storing the pulled data
         pass
 
-    def data_format(input, start_year=0, end_year=0):
-        
+    def data_format(input):
+        # Takes the data from the _____ file and puts it into a pandas dataframe
+        # Args: The input ticker symbol
+        # Effects: Creates a pandas data frame storing the pulled data with the ticker symbol and data as the keys.
         pass
 
 
