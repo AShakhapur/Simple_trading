@@ -8,6 +8,10 @@ import urllib
 
 
 class Data_Formatter:
+
+    def __init__(self, ticker):
+        pass
+
     def check_ticker(input):
         # Checks whether the input is a valid ticker symbol in the Yahoo! Finance Database
         # Args: The input ticker symbol
