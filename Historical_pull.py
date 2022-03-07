@@ -3,20 +3,19 @@ import pandas as pd
 import numpy
 import json
 import csv
-import urllib
+import yfinance as yf
 
 
+class Data_Pull:
 
-class Data_Formatter:
+    def __init__(self, inp):
+        try:
+            stock = yf.ticker(inp)
+        except:
+            print("Data cannot be accessed. Most likely an invalid ticker symbol.")
 
-    def __init__(self, ticker):
-        pass
-
-    def check_ticker(input):
-        # Checks whether the input is a valid ticker symbol in the Yahoo! Finance Database
-        # Args: The input ticker symbol
-        # Effects: Returns bool True if a valid ticker, else returns error
-        pass
+        self.stock = stock
+        return
 
     def check_etf(input):
         # Checks whether the input is a valid etf symbol in the Yahoo! Finance Database
@@ -37,6 +36,3 @@ class Data_Formatter:
         # Args: The input ticker symbol
         # Effects: Creates a pandas data frame storing the pulled data with the ticker symbol and data as the keys.
         pass
-
-
-
